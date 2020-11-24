@@ -1,3 +1,5 @@
+package main.java.com.company.classes;
+
 public class Pescado {
     private String tipoPescado, proveedor;
     private float peso;
@@ -63,7 +65,7 @@ public class Pescado {
 
     @Override
     public String toString() {
-        return String.format("%-20s | %-35s | %-20.1f | %-20d | %-20d",
+        return String.format("%-20s | %-30s | %-20.1f | %-20d | %-20d",
             tipoPescado, proveedor, peso, numLotePropio, indiceCalidad);
     }
 }
