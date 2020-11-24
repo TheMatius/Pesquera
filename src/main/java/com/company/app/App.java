@@ -97,7 +97,7 @@ public class App {
             "0. Salir\n" +
             "Seleccione una opción: ";
         int opt;
-        String tipoPescado, proveedor;
+        String nombre, proveedor;
         float peso;
         int numLoteProveedor, numLotePropio, indiceCalidad;
         do {
@@ -107,7 +107,7 @@ public class App {
             if (opt == 1) {
                 if (idxPescado < pescados.length) {
                     System.out.print("\nIngresa el tipo de pescado: ");
-                    tipoPescado = sc.next();
+                    nombre = sc.next();
                     System.out.print("Ingresa el nombre del proveedor: ");
                     proveedor = sc.next();
                     System.out.print("Ingresa el peso del pescado: ");
@@ -118,7 +118,7 @@ public class App {
                     numLotePropio = sc.nextInt();
                     System.out.print("Ingresa el indice de calidad: ");
                     indiceCalidad = sc.nextInt();
-                    pescados[idxPescado] = new Pescado(tipoPescado, proveedor, empleados[empleadoSeleccionado],
+                    pescados[idxPescado] = new Pescado(nombre, proveedor, empleados[empleadoSeleccionado],
                         peso, numLotePropio, numLoteProveedor, indiceCalidad);
                     idxPescado++;
                 } else {
@@ -127,7 +127,7 @@ public class App {
             } //Ver lista de pescados
             else if (opt == 2) {
                 if (idxPescado > 0) {
-                    String msg = String.format("%-20s | %-20s | %-20s | %-20s | %-25s",
+                    String msg = String.format("%-20s | %-10s | %-20s | %-20s | %-25s",
                         "Pescado", "Peso", "Número lote", "Indice de calidad", "Proveedor");
                     for (int i = 0; i < idxPescado; i++) {
                         msg += "\n" + pescados[i].toString();
