@@ -1,4 +1,7 @@
+package main.java.com.company.app;
+
 import javax.swing.JOptionPane;
+import main.java.com.company.classes.*;
 
 public class App {
     private static int idxPescado = 0;
